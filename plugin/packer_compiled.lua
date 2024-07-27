@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/myronphan/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?.lua;/Users/myronphan/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?/init.lua;/Users/myronphan/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?.lua;/Users/myronphan/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/myronphan/.cache/nvim/packer_hererocks/2.1.1692716794/lib/lua/5.1/?.so"
+local package_path_str = "/home/myron/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?.lua;/home/myron/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?/init.lua;/home/myron/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?.lua;/home/myron/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/myron/.cache/nvim/packer_hererocks/2.1.1692716794/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -76,82 +76,142 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   LuaSnip = {
     loaded = true,
-    path = "/Users/myronphan/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
+  },
+  ReplaceWithRegister = {
+    loaded = true,
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister",
+    url = "https://github.com/vim-scripts/ReplaceWithRegister"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/Users/myronphan/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   fzf = {
     loaded = true,
-    path = "/Users/myronphan/.local/share/nvim/site/pack/packer/start/fzf",
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/fzf",
     url = "https://github.com/junegunn/fzf"
   },
   ["fzf.vim"] = {
     loaded = true,
-    path = "/Users/myronphan/.local/share/nvim/site/pack/packer/start/fzf.vim",
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/fzf.vim",
     url = "https://github.com/junegunn/fzf.vim"
   },
   harpoon = {
     loaded = true,
-    path = "/Users/myronphan/.local/share/nvim/site/pack/packer/start/harpoon",
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
-    path = "/Users/myronphan/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "/Users/myronphan/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason-nvim-dap.nvim"] = {
+    loaded = true,
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/mason-nvim-dap.nvim",
+    url = "https://github.com/jay-babu/mason-nvim-dap.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
-    path = "/Users/myronphan/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["nvim-autopairs"] = {
+    config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
+    loaded = true,
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "/Users/myronphan/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-dap"] = {
+    config = { "\27LJ\2\n°\1\0\0\3\0\5\0\a+\0\2\0005\1\1\0005\2\0\0=\2\2\0015\2\3\0=\2\4\1K\0\1\0\15<leader>dr\1\3\0\0\27<cmd> DapContinue <CR>#Start or continue the debugger\15<leader>dz\1\0\0\1\3\0\0#<cmd> DapToggleBreakpoint <CR>\27Add breakpoint at line\0" },
+    loaded = true,
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-ui"] = {
+    loaded = true,
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    url = "https://github.com/rcarriga/nvim-dap-ui"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/myronphan/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-nio"] = {
+    loaded = true,
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/nvim-nio",
+    url = "https://github.com/nvim-neotest/nvim-nio"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/myronphan/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/myronphan/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/myronphan/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["rose-pine"] = {
     loaded = true,
-    path = "/Users/myronphan/.local/share/nvim/site/pack/packer/start/rose-pine",
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/myronphan/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
+  },
+  ["vim-easymotion"] = {
+    loaded = true,
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/vim-easymotion",
+    url = "https://github.com/easymotion/vim-easymotion"
+  },
+  ["vim-smoothie"] = {
+    loaded = true,
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/vim-smoothie",
+    url = "https://github.com/psliwka/vim-smoothie"
+  },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    path = "/home/myron/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: nvim-dap
+time([[Config for nvim-dap]], true)
+try_loadstring("\27LJ\2\n°\1\0\0\3\0\5\0\a+\0\2\0005\1\1\0005\2\0\0=\2\2\0015\2\3\0=\2\4\1K\0\1\0\15<leader>dr\1\3\0\0\27<cmd> DapContinue <CR>#Start or continue the debugger\15<leader>dz\1\0\0\1\3\0\0#<cmd> DapToggleBreakpoint <CR>\27Add breakpoint at line\0", "config", "nvim-dap")
+time([[Config for nvim-dap]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

@@ -6,6 +6,51 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  
+  use {
+      "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+  }
+
+  use {
+      "jay-babu/mason-nvim-dap.nvim",
+      requires = 
+      {
+          "williamboman/mason.nvim",
+          "mfussenegger/nvim-dap"
+      }
+  }
+
+  use 'vim-scripts/ReplaceWithRegister'
+
+  use 'mg979/vim-visual-multi' 
+
+  use 'tpope/vim-commentary'
+
+  use 'psliwka/vim-smoothie'
+
+  use 'easymotion/vim-easymotion'
+
+  use { "rcarriga/nvim-dap-ui", 
+  requires = {"mfussenegger/nvim-dap", 
+  "nvim-neotest/nvim-nio"},
+  }
+
+  use {'mfussenegger/nvim-dap',
+  config = function()
+      local plugin = true
+      local n = {
+          ["<leader>dz"] = {
+              "<cmd> DapToggleBreakpoint <CR>",
+              "Add breakpoint at line",
+          },
+          ["<leader>dr"] = {
+              "<cmd> DapContinue <CR>",
+              "Start or continue the debugger",
+          }
+      }
+  end
+  }
 
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.4',
